@@ -9,6 +9,7 @@ activity-4/
 activity-5/
 activity-6/
 activity-7/
+activity-8/
 
 Each folder contains one React component for that activity.
 
@@ -47,6 +48,8 @@ Activity 5 – Styled Button
 Activity 6 – Interactive Job Counter (events)
 
 Activity 7 - Advanced Job Counter (useState)
+
+Activity 8 - Dynamic input form with useState
 
 More activities will be added as I progress through the course.
 
