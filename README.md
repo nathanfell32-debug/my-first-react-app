@@ -46,7 +46,7 @@ Activity 5 – Styled Button
 
 Activity 6 – Interactive Job Counter (events)
 
-Activity 7 - Advanced Job Counter 
+Activity 7 - Advanced Job Counter (useState)
 
 More activities will be added as I progress through the course.
 
