@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import AdvancedJobCounter from "./activity-7/AdvancedJobCounter";
+import DynamicForm from "./activity-8/DynamicForm";
 
 function App() {
-   return <AdvancedJobCounter />;
+   return <DynamicForm />;
 }
 
 export default App;
