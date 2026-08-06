@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import JobCounter from "./activity-6/JobCounter";
+import AdvancedJobCounter from "./activity-7/AdvancedJobCounter";
 
 function App() {
-   return <JobCounter />;
+   return <AdvancedJobCounter />;
 }
 
 export default App;
