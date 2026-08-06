@@ -60,7 +60,3 @@ GitHub Desktop for version control
 Notes
 This repo is my main workspace for the React Essentials module.
 Older activities exist as separate repos but all new work is added here
-
----
-
-If you want, we can jump straight into **Activity 7** now — the version where your cou
