@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import DynamicForm from "./activity-8/DynamicForm";
+import BotListManager from "./activity-9/BotListManager";
 
 function App() {
-   return <DynamicForm />;
+   return <BotListManager />;
 }
 
 export default App;
