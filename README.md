@@ -12,6 +12,7 @@ activity-7/
 activity-8/
 activity-9/
 activity-10/
+activity-11/
 
 Each folder contains one React component for that activity.
 
@@ -56,6 +57,8 @@ Activity 8 - Dynamic input form with useState
 Activity 9 - Dynamic Bot list manager
 
 Activity 10 - Dynamic Bot List Manager with Add and Delete Functionality
+
+Activity 11 - Building a modular Job board application
 
 More activities will be added as I progress through the course.
 
