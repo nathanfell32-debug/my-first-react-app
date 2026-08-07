@@ -1,9 +1,12 @@
 import React from 'react';
-import './App.css';
-import BotListManager from "./activity-9/BotListManager";
+import DynamicBotManager from './activity-10/DynamicBotManager';
 
 function App() {
-   return <BotListManager />;
+   return (
+    <div className="App">
+      <DynamicBotManager />
+    </div>
+   );
 }
 
 export default App;
