@@ -15,6 +15,7 @@ activity-10/
 activity-11/
 activity-12/
 activity-13/
+activity-14/
 
 Each folder contains one React component for that activity.
 
@@ -65,6 +66,8 @@ Activity 11 - Building a modular Job board application
 Activity 12 - Building a modular job board with props
 
 Activity 13 - Building a Status Board with Dynamic Components
+
+Activity 14 - Building a job management application form
 
 More activities will be added as I progress through the course.
 
