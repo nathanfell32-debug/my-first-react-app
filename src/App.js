@@ -1,14 +1,29 @@
 import React from "react";
-import StatusBoard from "./activity-13/StatusBoard";
-
+import { useState } from "react";
+import JobForm from "./activity-14/JobForm";
 
 function App() {
-  return (
-    <div className="App">
-      <h1>Activity 13 - Status Board</h1>
-      <StatusBoard />
-    </div>
-   );
-}
+  const [jobs, setJobs] = useState([]);
 
+  function handleAddJob(newJob) {
+    setJobs([...jobs, newJob]);
+  }
+
+  return (
+    <div>
+      <h1>Job Management App</h1>
+
+      <JobForm onAddJob={handleAddJob} />
+
+      <h2>Jobs Added:</h2>
+      <ul>
+        {jobs.map((job, index) => (
+          <li key={index}>
+            <strong>{job.title}</strong>> - {job.company}, {job.location}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 export default App;
