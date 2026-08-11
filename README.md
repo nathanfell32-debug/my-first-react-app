@@ -18,6 +18,8 @@ activity-13/
 activity-14/
 activity-15/
 activity-16/
+activity-17/
+activity-18/
 
 Each folder contains one React component for that activity.
 
@@ -74,6 +76,10 @@ Activity 14 - Building a job management application form
 Activity 15 - Styling the job management application form (carrying on from the previous activities component file, i added classNames in the JobForm jsx file and created a separate css component
 
 Activity 16 - Enhancing the Job Management Application with Reusable Components - carrying on from activity 14 & 15
+
+Activity 17 - Implementing Dynamic Functionality in the Job Management Application - carrying on from activitys 14-17
+
+Activity 18 - Enhancing Form Handling in the Job Management Application - carrying on from activities 14 - 18
 
 More activities will be added as I progress through the course.
 
