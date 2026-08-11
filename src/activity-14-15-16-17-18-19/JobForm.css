@@ -103,3 +103,8 @@ body.dark-mode .tag {
 body.dark-mode .submit-data {
   background: #3399ff;
 }
+/* highlight selected categories */
+.tag.selected {
+  background: #007bff;
+  color: white;
+}
