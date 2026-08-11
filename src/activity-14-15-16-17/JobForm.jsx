@@ -1,73 +1,130 @@
 import { useState } from "react";
-import "./AppForm.css";
+import "./JobForm.css";
 
 function JobForm ({ onAddJob }) {
-    const [formData, setFormData] = useState({
+    const [jobDetails, setJobDetails] = useState({
         title: "",
         company: "",
         location: "",
         salary: "",
         description: "",
-        category: "",
-        status: "start",
+        type: "",
       });
     
-      function handleChange(e) {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value,
-        });
+      const [error, setError] = useState("");
+      const [success, setSuccess] = useState("");
+
+      function handleInputChange(e) {
+        const { name, value } = e.target;
+
+        setJobDetails(prev => ({
+            ...prev,
+            [name]: value
+        }));
+
+        setError("");
+        setSuccess("");
       }
-      function handleCategorySelect(category) {
-        setFormData({
-            ...formData,
-            category,
-        });
-      }
+
       function handleSubmit(e) {
         e.preventDefault();
+        
+    //validation 
+    const fields = Object.values(jobDetails);
+    const empty = fields.some(field => field.trim() === "");
 
-        if (!formData.title || !formData.category || !formData.status) {
-            alert("Please fill in all required fields.");
-            return;
-        }
+    if (empty) {
+        setError("Please fill in all fields before submitting.");
+        return;
+    }
 
-        onAddJob(formData);
+    if (jobDetails.title.length < 3) {
+        setError("Job title must be at least 3 characters long.");
+        return;
+    }
 
-        setFormData({
+    //build job object 
+    const newJob = {
+        id: crypto.randomUUID(),
+        ...jobDetails,
+        status: "start"
+    };
+
+    console.log("job added:", newJob);
+
+    onAddJob(newJob);
+
+    setSuccess("Job successfully added!");
+
+    resetForm();
+}  
+
+    function resetForm() {
+        setJobDetails({
             title: "",
             company: "",
             location: "",
             salary: "",
             description: "",
-            category: "",
-            status: "start",
+            type: "",
         });
       }
 
       return (
         <form onSubmit={handleSubmit} className="form-header">
-            <input name="title" value={formData.title} onChange={handleChange} placeholder="Job Title" className="bot-input" />
-            <input name="company" value={formData.company} onChange={handleChange} placeholder="company" className="bot-input" />
-            <input name="location" value={formData.location} onChange={handleChange} placeholder="location" className="bot-input" />
-            <input name="salary" value={formData.salary} onChange={handleChange} placeholder="salary" className="bot-input" />
-            <textarea name="description" value={formData.description} onChange={handleChange} placeholder="description" className="form-details" />
-            
-            {/* category buttons */}
-            <div className="bottom-line">
-                <button type="button" className="tag" onClick={() => handleCategorySelect("full-time")}>Full-time</button>
-                <button type="button" className="tag" onClick={() => handleCategorySelect("part-time")}>Part-time</button>
-                <button type="button" className="tag" onClick={() => handleCategorySelect("contract")}>Contract</button>
-            </div>
+            <input
+            type="text"
+            name="title"
+            placeholder="job title"
+            value={jobDetails.title}
+            onChange={handleInputChange}
+          />
+            <input
+            type="text"
+            name="company"
+            placeholder="Company"
+            value={jobDetails.company}
+            onChange={handleInputChange}
+          />
+            <input
+            type="text"
+            name="location"
+            placeholder="location"
+            value={jobDetails.location}
+            onChange={handleInputChange}
+          />
+            <input
+            type="text"
+            name="salary"
+            placeholder="salary"
+            value={jobDetails.salary}
+            onChange={handleInputChange}
+          />
+            <textarea
+            name="description"
+            placeholder="description"
+            value={jobDetails.description}
+            onChange={handleInputChange}
+          />     
+            <select
+            name="type"
+            value={jobDetails.type}
+            onChange={handleInputChange}
+           >    
+            <option value="">Select type</option>
+            <option value="Full-time">Full-time</option>
+            <option value="Part-time">Part-time</option>
+            <option value="Contract">Contract</option>
+          </select>
 
-            {/* status dropdown */}
-            <select name="status" value={formData.status} onChange={handleChange} className="job-status">
-                <option value="start">Start</option>
-                <option value="in-progress">In Progress</option>
-                <option value="completed">Completed</option>
-            </select>
-            
-            <button type="submit" className="submit-data">Add Job</button>
+          {error && <p className="error">{error}</p>}
+          {success && <p className="success">{success}</p>}  
+
+          <button type="submit" disabled={
+            Object.values(jobDetails).some(v => v.trim() === "")
+          } className="submit-data">
+            Add Job
+            </button>
         </form>
       );
 }
