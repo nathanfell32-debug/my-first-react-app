@@ -31,3 +31,30 @@
     border-radius: 6px;
     border: 1px solid #ddd;
 }
+.job-actions {
+    margin-top: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+}
+.move-button {
+    background: #4caf50;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.6rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.delete-button {
+    background: #e53935;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.6rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.move-button:hover {
+    background: #43a047;
+}
+.delete-button:hover {
+    background: #d32f2f;
+}
