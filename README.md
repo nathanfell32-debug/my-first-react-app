@@ -23,6 +23,7 @@ activity-18/
 activity-19/
 activty-20/
 activity-21/
+activity-22/
 
 Each folder contains one React component for that activity.
 
@@ -89,6 +90,8 @@ Activity 19 - Implementing Multi-Select Category Functionality - once again buil
 Activty 20 - Enhance User Interface with Dynamic Category Selection
 
 Activity 21 - Implement a Job Management UI with React - carrying on from activity 14-20
+
+Activity 22 -  Implement Delete Functionality and Form Reset in a React Job Management App - building upon activity 14 - 21 again
 
 More activities will be added as I progress through the course.
 
