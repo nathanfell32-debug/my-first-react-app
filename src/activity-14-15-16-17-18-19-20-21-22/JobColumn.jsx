@@ -1,6 +1,6 @@
 import JobCard from "./JobCard";
 
-function JobColumn({ title, status, jobs }) {
+function JobColumn({ title, status, jobs, deleteJob }) {
 
     const filteredJobs = jobs.filter(job => job.status === status);
 
@@ -19,7 +19,7 @@ function JobColumn({ title, status, jobs }) {
         )}
 
             {filteredJobs.map(job => (
-                <JobCard key={job.id} job={job} />
+                <JobCard key={job.id} job={job} deleteJob={deleteJob} />
             ))}
         </div>
     );

@@ -3,7 +3,7 @@ import { useState } from "react";
 function JobForm({ onAddJob }) {
   const [activity, setActivity] = useState("");
   const [categories, setCategories] = useState([]);
-  const [status, setStatus] = useState("Need to complete");
+  const [status, setStatus] = useState("Need to Complete");
 
   function handleCategoryChange(e) {
     const value = e.target.value;

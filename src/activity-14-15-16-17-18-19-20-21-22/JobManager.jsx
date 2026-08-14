@@ -5,8 +5,11 @@ import JobColumn from "./JobColumn";
 function JobManager() {
     const [jobs, setJobs] = useState([]);
 
-    function addJob(addJob) {
-        setJobs([...jobs, addJob]);
+    function addJob(newJob) {
+        setJobs([...jobs, newJob]);
+    }
+    function deleteJob(jobId) {
+        setJobs(jobs.filter(job => job.id !== jobId));
     }
 
     return (
@@ -26,9 +29,9 @@ function JobManager() {
                 marginTop: "30px"
             }}>
 
-            <JobColumn title="Need to complete" status="Need to complete" jobs={jobs} />
-            <JobColumn title="In Progress" status="In Progress" jobs={jobs} />
-            <JobColumn title="Completed" status="Completed" jobs={jobs} />
+            <JobColumn title="Need to Complete" status="Need to Complete" jobs={jobs} deleteJob={deleteJob} />
+            <JobColumn title="In Progress" status="In Progress" jobs={jobs} deleteJob={deleteJob} />
+            <JobColumn title="Completed" status="Completed" jobs={jobs} deleteJob={deleteJob} />
            </div> 
         </div>
     );
