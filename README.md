@@ -20,6 +20,7 @@ activity-15/
 activity-16/
 activity-17/
 activity-18/
+activity-19/
 
 Each folder contains one React component for that activity.
 
@@ -80,6 +81,8 @@ Activity 16 - Enhancing the Job Management Application with Reusable Components 
 Activity 17 - Implementing Dynamic Functionality in the Job Management Application - carrying on from activitys 14-17
 
 Activity 18 - Enhancing Form Handling in the Job Management Application - carrying on from activities 14 - 18
+
+Activity 19 - Implementing Multi-Select Category Functionality - once again building upon activity 14 - 18
 
 More activities will be added as I progress through the course.
 
